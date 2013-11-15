@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    #ViewContainer {
+      position: absolute;
+    }
+
+    #explanation {
+      overflow:auto;
+      position: absolute;
+    }
+  </style>
+  <title>Cube Rotation</title>
+  <script type="text/javascript" src="osg.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+  <div id="explanation" >
+    <ul><strong>Test date: </strong><ul>
+        <li>Update time: <a id="update"></a></li>
+        <li>Rotation angle: <a id="angle"></a></li>
+    </ul>
+    <p>A simple example of autorotating cube by <a href="https://github.com/cedricpinson/osgjs">osgjs</a></p>
+    <p>2/11/2013 by NIE Xin</p>
+  </div>
+  <div id="ViewContainer">
+  <canvas id="3DView"></canvas>
+  </div>
+
+</body>
+</html>
