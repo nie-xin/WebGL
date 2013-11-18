@@ -2,14 +2,14 @@
 // vertex shader program
 var VSHADER_SOURCE =
     'void main() {\n' +
-    'gl_Position = vec4(0.0, 0.0, 0.0, 1.0); \n' + // Coordinates
+    'gl_Position = vec4(0.0, 0.5, 0.0, 1.0); \n' + // Coordinates
     'gl_PointSize = 10.0;\n' +
     '}\n';
 
 // fragment shader program
 var FSHADER_SOURCE =
     'void main() {\n' +
-    ' gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);\n' + // Set the color
+    ' gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);\n' + // Set the color
     '}\n';
 
 function main() {
