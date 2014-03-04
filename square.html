@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A simple Three.js page</title>
+	<script src="lib/Three.js/build/Three.js"></script>
+	<script>
+	function onLoad() {
+		// Grab container div
+		var container = document.getElementById("container");
+
+		// Create the Three.hs renderer, add it to our div
+		var renderer = new THREE.WebGLRenderer();
+		renderer.setSize(container.offsetWidth, container.offsetHeight);
+		container.appendChild(renderer.domElement);
+
+		// Create a scene
+		var scene = new THREE.Scene();
+
+		// Create a camera and add to scene
+		var camera = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 1, 4000);
+		camera.position.set(0, 0, 3.333);
+		scene.add(camera);
+
+		// Now, create a rectangle and add it to scene
+		var geometry = new THREE.PlaneGeometry(1, 1);
+		var mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial());
+		scene.add(mesh);
+
+		// Render it
+		renderer.render(scene, camera);
+	}
+	</script>
+</head>
+
+<body onLoad="onLoad();">
+<div id="container" style="width:500px; height:500px; background-color:#000000">
+</div>
+</body>
+</html>
